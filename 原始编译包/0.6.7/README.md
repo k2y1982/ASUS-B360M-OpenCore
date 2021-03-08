@@ -1,0 +1,25 @@
+# OC 0.6.7 官方正式版
+
+- Fixed ocvalidate return code to be non-zero when issues are found
+- Added OEM values to PlatformInfo in Automatic mode
+- Improved CPU frequency calculation on Haswell and earlier
+- Fixed issues when applying certain patches
+- Added SSN (and HW_SSN) variable support
+- Added onscreen early logging in DEBUG builds for legacy firmware
+- Added workaround for firmware not specifying DeviceHandle at bootstrap
+- Added support for R/O page tables in SetupVirtualMap quirk
+- Added OEM preservation for certain Apple SMBIOS tables
+- Fixed switching to graphics mode when entering OpenCanopy
+- Fixed installing Apple FB Info protocol when no GOP exists
+- Fixed abort timeout sound in OpenCanopy on key press
+- Added GopPassThrough option to support GOP protocol over UGA
+- Fixed CPU speed rounding for certain Xeon and Core 2 CPUs
+- Removed KeyMergeThreshold as it never functioned anyway
+- Added acdtinfo utility to lookup certain products
+- Fixed FSBFrequency calculation with fractional multiplier
+- Fixed showing core count for some AMD CPUs
+- Added ResetTrafficClass to reset TCSEL to T0 on legacy HDA
+- Fixed default boot entry selection without timeout for builtin picker
+- Added ocpasswordgen utility to generate OpenCore password data
+- Added ActivateHpetSupport quirk to activate HPET support
+- Fixed opencore-version reporting the incorrect version in rare cases
