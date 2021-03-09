@@ -26,17 +26,17 @@
 
 # **目前版本为：**
 
-2021-03-09编译OpenCore-0.6.8-03-09编译版
+ **2021-03-09编译OpenCore-0.6.8-03-09编译版**
 
 - 修复OpenCanopy有时会是开机显示菜单错误
 
-2021-03-07编译OpenCore-0.6.8-03-07编译版
+ **2021-03-07编译OpenCore-0.6.8-03-07编译版**
 
 - 修复在根文件系统无法创建日志文件的问题
 - 修复DisableSingleUser在某些情况下不被启用
 - Mac EFI固件增加了ForceBooterSignature quirk
 
-2021-03-05编译OpenCore-0.6.8-03-05编译版
+ **2021-03-05编译OpenCore-0.6.8-03-05编译版**
 
 - Windows版本切换为VS2019 toolchain
 - 减少了旧式引导安装交互工作
@@ -47,11 +47,11 @@
 - 在“自动”模式下为SMBIOS添加了内存类型解码
 - 支持将自定义项设置为默认引导选项
 
-2021-03-03编译OpenCore-0.6.8-03-03编译版
+ **2021-03-03编译OpenCore-0.6.8-03-03编译版**
 
 - 更新版本号为0.6.8 开发版
 
-2021-03-01编译OpenCore-0.6.7-03-01编译版
+ **2021-03-01编译OpenCore-0.6.7-03-01编译版**
 
 - 添加ResetTrafficClass以在legacy HDA上将TCSEL重置为T0
 - 修复启动选票超时时，选择默认启动项
@@ -59,23 +59,23 @@
 - 添加ActivateHpetSupport quirk项来激活对HPET的支持
 - 修复opencore版本在极少数情况下报告错误版本的问题
 
-2021-02-25编译OpenCore-0.6.7-02-25编译版
+ **2021-02-25编译OpenCore-0.6.7-02-25编译版**
 
 - 移除KeyMergeThreshold
 - 添加了acdtinfo实用程序来查找某些产品
 
-2021-02-23编译OpenCore-0.6.7-02-23编译版
+ **2021-02-23编译OpenCore-0.6.7-02-23编译版**
 
 - 增加了GopPassThrough选项，以支持UGA上的GOP协议。
 - 修复部分Xeon和Core 2 CPU频率。
 
-2021-02-21编译OpenCore-0.6.7-02-21编译版
+ **2021-02-21编译OpenCore-0.6.7-02-21编译版**
 
 - 为某些Apple SMBIOS表添加了OEM保护
 - 修复切换到图形模式时使用OpenCanopy，
 - 修正在没有GOP的情况下安装Apple-FB协议的问题。
 
-2021-02-19编译OpenCore-0.6.7-02-19编译版
+ **2021-02-19编译OpenCore-0.6.7-02-19编译版**
 
 - 在旧固件的调试版本中增加了早期版本的屏幕登录功能
 - 新增引导时未指定DeviceHandle固件的解决方法
