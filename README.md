@@ -4,7 +4,7 @@
 
 - 支持核显自动识别 经测试 boot-args：igfxfw=2 npci=0x3000 就可以自动驱动核显
 
-- 下载系统和系统写入u盘可以看看上面的[wiki](https://gitee.com/k2y1982/opencore/wikis)。
+- 下载系统和系统写入u盘可以看看上面的[wiki](https://gitee.com/k2y1982/OC/wikis)。
 
 # **为配合 big sur 安装特性已做如下修改：** 
 
