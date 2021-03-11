@@ -1,25 +1,25 @@
 # OC 0.6.7 官方正式版
 
-- Fixed ocvalidate return code to be non-zero when issues are found
-- Added OEM values to PlatformInfo in Automatic mode
-- Improved CPU frequency calculation on Haswell and earlier
-- Fixed issues when applying certain patches
-- Added SSN (and HW_SSN) variable support
-- Added onscreen early logging in DEBUG builds for legacy firmware
-- Added workaround for firmware not specifying DeviceHandle at bootstrap
-- Added support for R/O page tables in SetupVirtualMap quirk
-- Added OEM preservation for certain Apple SMBIOS tables
-- Fixed switching to graphics mode when entering OpenCanopy
-- Fixed installing Apple FB Info protocol when no GOP exists
-- Fixed abort timeout sound in OpenCanopy on key press
-- Added GopPassThrough option to support GOP protocol over UGA
-- Fixed CPU speed rounding for certain Xeon and Core 2 CPUs
-- Removed KeyMergeThreshold as it never functioned anyway
-- Added acdtinfo utility to lookup certain products
-- Fixed FSBFrequency calculation with fractional multiplier
-- Fixed showing core count for some AMD CPUs
-- Added ResetTrafficClass to reset TCSEL to T0 on legacy HDA
-- Fixed default boot entry selection without timeout for builtin picker
-- Added ocpasswordgen utility to generate OpenCore password data
-- Added ActivateHpetSupport quirk to activate HPET support
-- Fixed opencore-version reporting the incorrect version in rare cases
+-修复了ocvalidate在发现问题时返回非零代码的问题
+-在自动模式下向PlatformInfo添加OEM值
+-改进了Haswell和更早版本的CPU频率计算
+-修复了应用某些修补程序时出现的问题
+-增加了SSN（和HW_SSN）变量支持
+-添加了旧固件的屏幕早期登录调试版本
+-为引导时未指定DeviceHandle的固件添加了解决方法
+-在SetupVirtualMap quirk中添加了对R/O页表的支持
+-为某些Apple SMBIOS表添加了OEM保留
+-固定切换到图形模式时，进入OpenCanopy
+-修正了在没有GOP的情况下安装Apple-FB-Info协议的问题
+-固定中止超时声音在OpenCanopy按键
+-增加了GopPassThrough选项以支持UGA上的GOP协议
+-某些Xeon和Core 2 CPU的固定CPU速度舍入
+-删除了KeyMergeThreshold，因为它从未运行过
+-添加了acdtinfo实用程序来查找某些产品
+-用分数乘法器计算固定频率
+-修正了显示一些AMD CPU的核心数的问题
+-添加ResetTrafficClass以在遗留HDA上将TCSEL重置为T0
+-固定的默认启动项选择没有超时的内置选择器
+-添加了ocpasswordgen实用程序来生成OpenCore密码数据
+-添加了ActivateHpetSupport怪癖来激活HPET支持
+-修复了opencore版本报告不正确的版本在少数情况下
