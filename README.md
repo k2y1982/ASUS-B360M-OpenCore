@@ -62,6 +62,11 @@
 
 # **目前版本为：**
 
+**2021-03-19编译OpenCore-0.6.8-03-19编译版**
+
+- 修复OpenCanopy和FileVault 2光标的不正常移动
+- 修复OpenCanopy中断处理导致的延宕事件和延迟
+
 **2021-03-17编译OpenCore-0.6.8-03-17编译版**
 
 - 添加ACPI补丁的Base和BaseSkip查询
