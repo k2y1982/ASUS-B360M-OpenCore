@@ -1,25 +1,60 @@
-# OC 0.6.7 官方正式版
+# OC 0.6.8 官方正式版
 
-- 修复了ocvalidate在发现问题时返回非零代码的问题
-- 在自动模式下向PlatformInfo添加OEM值
-- 改进了Haswell和更早版本的CPU频率计算
-- 修复了应用某些修补程序时出现的问题
-- 增加了SSN（和HW_SSN）变量支持
-- 添加了旧固件的屏幕早期登录调试版本
-- 为引导时未指定DeviceHandle的固件添加了解决方法
-- 在SetupVirtualMap quirk中添加了对R/O页表的支持
-- 为某些Apple SMBIOS表添加了OEM保留
-- 固定切换到图形模式时，进入OpenCanopy
-- 修正了在没有GOP的情况下安装Apple-FB-Info协议的问题
-- 固定中止超时声音在OpenCanopy按键
-- 增加了GopPassThrough选项以支持UGA上的GOP协议
-- 某些Xeon和Core 2 CPU的固定CPU速度舍入
-- 删除了KeyMergeThreshold，因为它从未运行过
-- 添加了acdtinfo实用程序来查找某些产品
-- 用分数乘法器计算固定频率
-- 修正了显示一些AMD CPU的核心数的问题
-- 添加ResetTrafficClass以在遗留HDA上将TCSEL重置为T0
-- 固定的默认启动项选择没有超时的内置选择器
-- 添加了ocpasswordgen实用程序来生成OpenCore密码数据
-- 添加了ActivateHpetSupport怪癖来激活HPET支持
-- 修复了opencore版本报告不正确的版本在少数情况下
+- 切换到VS2019 toolchain for Windows builds
+- 减少了旧式引导安装交互工作
+- 提高了OpenCanopy渲染性能
+- 增加了OpenCanopy关闭和重启按钮
+- 减少OpenCanopy鼠标指针输入延迟
+- 修正了光标边界可能与OpenCanopy的不同
+- 改进的内置选取器渲染性能
+- 在自动模式下为SMBIOS添加了内存类型解码
+- 正确支持将自定义项设置为默认引导选项
+- 修复了根文件系统不可写时创建日志文件的问题
+- 修复了在某些情况下不启用DisableSingleUser的问题
+- 增加了Mac EFI固件的ForceBooterSignature怪癖
+- 固定敞篷有时切断显示开机条目
+- 进一步改进了传统CPU的CPU频率计算
+- 固定SMBIOS SMC版本编码序列
+- 增加了从苹果平台信息TSC频率读数
+- 增加了TSC频率读取苹果设备与nForce芯片组
+- 添加了ACPI补丁的Base和BaseSkip查找
+- 修正了修补过程中ACPI表的魔法损坏
+- 修复了OpenCanopy和FileVault 2光标的不自然移动
+- 修复了导致遗漏事件和延迟的OpenCanopy中断处理
+- 改进的OpenCanopy双击检测
+- 减少了OpenCanopy触摸输入滞后，提高了可用性
+- 改进了OpenCanopy和内置选择器的按键响应能力
+- OpenCanopy和内置pickers中改进的非重复密钥检测
+- 修正了在某些系统上防止敞篷在释放前褪色的逃生方法
+- 修复了某些PS/2系统上密钥处理的快速重复然后暂停问题
+- 在使用PollAppleHotKeys时添加了精确的Shift+Enter/Shift+Index检测
+- 在内置选取器中添加了“设置默认值”指示器
+- 将VerifyMsrE2替换为ControlMsrE2，还允许在某些固件上解锁
+- 修正了刷新入口视图时OpenCanopy闪烁的问题
+- 添加了OpenCanopy选项卡导航支持
+- 增加了OpenCanopy图形密码界面
+- 增加了OpenCanopy脉冲动画信号超时
+- 添加了“设置默认值”指示器
+- 修正了OpenCanopy在指针单击时不中止超时的问题
+- 修正了OpenCanopy简介动画不能用UIScale缩放的问题
+- 添加OpenCanopy引导条目标签滚动（修复丢失的长标签）
+- 添加了选项卡关闭和重新启动按钮，以内置选择器
+- 修复了一些运行OpenDuet的系统的固件关闭问题
+- 为Escape添加了0作为别名热键，以便在隐藏时强制显示选取器
+- 添加=/+键作为CTRL设置默认操作系统的别名
+- 增加了额外的支持配置正确的键重复行为与键支持模式
+- 前Nehalem Intel CPU上的固定CPU乘法器检测
+- 修复了SMBIOS中多处理器和处理器缓存的错误处理
+- 匹配的默认Apple引导选择器光标开始位置
+- 更新了OpenShell devices命令，以支持某些苹果固件返回的未对齐设备名称
+- 在OpenCanopy中为dmg引导选项添加了（dmg）后缀
+- 添加了Rocket Lake和Tiger Lake CPU的标识符
+- 添加了PickerAudioAssist“磁盘映像”指示
+- 修复了罕见情况下两次播放PickerAudioAsist指示的问题
+- 改进的OpenCanopy指针加速
+- 添加了对AppleEvent协议属性和特性的更精确的控制
+- 在CrScreenshotDxe上添加了动态键盘协议安装
+- 支持启动带有参数支持的UEFI工具（例如ControlMsrE2），而不需要来自picker的参数
+- 修复了OpenCanopy字体高度计算，可能会拒绝以前使用的字体并减轻内存损坏
+- 修复了Xeon E5XXX/E5-XXXX和Xeon WXXXX/W-XXXX CPU的错误标识
+- 添加了RSDP、RSDT和XSDT处理以规范化eheaders ACPI怪癖
