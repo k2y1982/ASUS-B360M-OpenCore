@@ -62,6 +62,58 @@
 
 # **目前版本为：**
 
+**2021-04-06编译OpenCore-0.6.8-04-06正式版**
+
+- 修复了OpenCanopy字体高度计算，可能会拒绝以前使用的字体并减轻内存损坏
+- 修复了Xeon E5XXX/E5-XXXX和Xeon WXXXX/W-XXXX CPU的错误标识
+- 添加了RSDP、RSDT和XSDT处理NormalizeHeaders ACPI quirk
+
+**2021-04-04编译OpenCore-0.6.8-04-04编译版**
+
+- 添加PickerAudioAssist“磁盘映像”显示
+- 修复罕见情况下两次播放PickerAudioAsist指示的问题
+- 改进OpenCanopy指针加速
+- 添加对AppleEvent协议属性和特性的更精确的控制
+- 在CrScreenshotDxe上添加了动态键盘协议安装
+- 支持启动带有参数支持的UEFI工具（例如ControlMsrE2），而不需要来自picker的参数。
+
+**2021-04-02编译OpenCore-0.6.8-04-02编译版**
+
+- 匹配的默认Apple引导选择器光标的起始位置
+- 更新了OpenShell devices命令，以支持某些苹果固件返回的不对齐的设备名称
+- 在OpenCanopy中为dmg引导选项添加了（dmg）后缀
+- 添加了Rocket Lake和Tiger Lake CPU的标识符
+
+**2021-03-31编译OpenCore-0.6.8-03-31编译版**
+
+- 优化部分代码
+
+**2021-03-29编译OpenCore-0.6.8-03-29编译版**
+
+- 将Escape映射到0键作为快捷键使用，以便在选盘界面隐藏时强制显示
+- 将CTRL映射到=/+键作为设置默认操作系统的快捷键使用
+- 增加在KeySupport模式下，额外支持配置正确的密钥重复行为
+- 修复在4核 Intel CPU上的CPU倍频检测
+- 修复SMBIOS中多处理器和处理器缓存的错误
+
+**2021-03-25编译OpenCore-0.6.8-03-25编译版**
+
+- 增加苹果事件键盘处理，以改进OpenCanopy和内置选择器的按键响应
+- 增加苹果键映射的边缘检测，以改进拾取器中的非重复键响应
+- 修正一些PS/2系统上键盘处理的快速重复然后失速问题
+- 使用PollAppleHotKeys改进Shift+Enter和Shift+Index行为
+- 添加了CTRL-hold指示器到内置选择器
+- 用ControlMsrE2替换VerifyMsrE2，也允许在某些固件上解锁
+
+**2021-03-23编译OpenCore-0.6.8-03-23编译版**
+
+- 优化部分代码。
+
+**2021-03-21编译OpenCore-0.6.8-03-21编译版**
+
+- 改进OpenCanopy双击实用性
+- 减少OpenCanopy触摸输入滞后，提高可用性.
+
 **2021-03-19编译OpenCore-0.6.8-03-19编译版**
 
 - 修复OpenCanopy和FileVault 2光标的不正常移动
