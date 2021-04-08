@@ -1,4 +1,4 @@
-# ASUS-B360M-i5 8600k-OC0.6.8
+# ASUS-B360M-i5 8600k-OC0.6.9开发版
 
 - 不是自己编译版 基本包为 独行秀才 的编译包
 
@@ -43,24 +43,29 @@
 |显卡|核显硬件加速正常，独显驱动正常|
 |声卡|直接驱动，且使用 id 为 5，完美适配本主板|
 |网卡|正常|
-|睡眠|短时间睡眠正常，长时间睡眠可能会无法唤醒|
+|睡眠|睡眠正常|
 |USB|正常,USBPorts.kext为定制驱动|
 
 ## **主要驱动**
 
 |驱动|版本|
 |-----------------|----|
-|Lilu.kext|1.5.1|
-|VirtualSMC.kext|1.2.1|
-|WhateverGreen.kext|1.4.8|
+|Lilu.kext|1.5.2|
+|VirtualSMC.kext|1.2.2|
+|WhateverGreen.kext|1.4.9|
 |RealtekRTL8111.kext|2.3.0d7|
-|AppleALC.kext|1.5.8|
+|AppleALC.kext|1.5.9|
 
 ## **引导及系统版本**
 已经测试支持Catalina全部，Big Sur 11.2.3 
 
 
 # **目前版本为：**
+
+**2021-04-08编译OpenCore-0.6.9-04-08编译版**
+
+- 更新版本号为0.6.9
+- 修正加载时光标矩形移动不同步的问题，例如CrScreenshotDxe
 
 **2021-04-06编译OpenCore-0.6.8-04-06正式版**
 
