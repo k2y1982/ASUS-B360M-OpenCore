@@ -62,6 +62,16 @@
 
 # **目前版本为：**
 
+**2021-04-12编译OpenCore-0.6.9-04-12编译版**
+
+- 更新基础EDK II包为edk2-stable202102
+- 应用所需最低Apple OEM以适应Apple Event协议版本
+- 将CustomDelays更改为正常的布尔设置，默认设置为false
+- 更改键盘重复故障保护和样本值的苹果OEM值
+- 更改PointerSpeedMul故障安全到苹果OEM值
+- 更新了文档，包括AMI KeySupport与V1或V2 KeySupport与不使用KeySupport的系统上的密钥重复设置配置
+- 禁止不正确的安全配置时，防止“set default”UI
+
 **2021-04-08编译OpenCore-0.6.9-04-08编译版**
 
 - 更新版本号为0.6.9
