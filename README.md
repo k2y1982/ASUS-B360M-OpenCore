@@ -62,6 +62,11 @@
 
 # **目前版本为：**
 
+**2021-04-14编译OpenCore-0.6.9-04-14编译版**
+
+- 添加forguefisupport quirk来解决遗留的efi1.x固件兼容性问题
+- 添加reloadOptionROM quirk，以强制PCI设备上的加载选项ROM
+
 **2021-04-12编译OpenCore-0.6.9-04-12编译版**
 
 - 更新基础EDK II包为edk2-stable202102
