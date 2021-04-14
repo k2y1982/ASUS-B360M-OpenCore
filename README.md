@@ -50,11 +50,11 @@
 
 |驱动|版本|
 |-----------------|----|
-|Lilu.kext|1.5.2|
-|VirtualSMC.kext|1.2.2|
-|WhateverGreen.kext|1.4.9|
+|Lilu.kext|1.5.3|
+|VirtualSMC.kext|1.2.3|
+|WhateverGreen.kext|1.5.0|
 |RealtekRTL8111.kext|2.3.0d7|
-|AppleALC.kext|1.5.9|
+|AppleALC.kext|1.6.0|
 
 ## **引导及系统版本**
 已经测试支持Catalina全部，Big Sur 11.2.3 
