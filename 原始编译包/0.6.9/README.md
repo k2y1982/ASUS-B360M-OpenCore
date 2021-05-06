@@ -1,0 +1,21 @@
+# OC 0.6.9 官方正式版
+
+- 加载时固定的不同步光标运动矩形，例如 CrScreenshotDxe
+- 更新基础 EDK II 包到 edk2 稳定 202102
+- 应用一致执行所需的最低 Apple OEM 苹果事件协议版本
+- 将自定义延迟更改为不太令人惊讶的布尔设置与假故障安全
+- 将关键重复故障安全性和示例值更改为 Apple OEM 值
+- 更改指点速将故障安全更改为 Apple OEM 值
+- 更新文档，以包括有和无密钥支持的关键重复设置的配置
+- 当安全配置不允许执行操作时，防止"设置默认"UI
+- 为解决方法传统 EFI 1.x 固件兼容性添加了怪癖ForgeUefiSupport
+- 在 PCI 设备上强制加载选项ROM 时添加了怪癖ReloadOptionRoms
+- 已添加，允许没有关闭和重新启动按钮的运行拾取器OC_ATTR_USE_MINIMAL_UI
+- 根据现有的暴露敏感数据位，将 OpenCore 版本编号的显示添加到 OpenCanopy 以及内置拾取器
+- 在 UEFI 工具中增加了对案例不敏感的参数处理的支持
+- 增加了SHA-512和SHA-384哈希算法的矢量加速度，thx@MikhailKrichanov
+- 在打开扫描中使用箭头键时固定环绕
+- 为SMBIOS和其他版本更新内置固件版本
+- 为用户空间实用程序添加捆绑 Linux 版本
+- 空槽的固定回退 SMBIOS 值ManufacturerNO DIMM
+- 在低分辨率的情况下运行 OpenCanopy 时的固定断言将回落到现在构建
