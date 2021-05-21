@@ -2,7 +2,15 @@
 
 - 不是自己编译版 基本包为 独行秀才 的编译包
 
-- 支持核显自动识别 经测试 boot-args：igfxfw=2 npci=0x3000 就可以自动驱动核显
+- 无需添加显卡ID，自动驱动。
+
+|启动参数|说明|
+|-----------------|-------|
+|igfxfw=2|引导参数（和属性），以强制加载苹果GuC固件|
+|igfxrpsc=1|引导参数（属性）以启用RPS控制修补程序（提高IGPU性能）测试中|
+|npci=0x3000|解决独立显卡PCIconfiguration begin卡主不动|
+
+- 据说igfxfw=2会导致核显频率过高死机，现在正在测试igfxrpsc=1。
 
 - 下载系统和系统写入u盘可以看看上面的[wiki](https://gitee.com/k2y1982/OC/wikis)。
 
@@ -41,23 +49,30 @@
 |--------|-----------------------------------------|
 |CPU 变频|正常|
 |显卡|核显硬件加速正常，独显驱动正常|
-|声卡|直接驱动，且使用 id 为 5，完美适配本主板|
+|声卡|直接驱动，且使用 id 为 1，完美适配本主板|
 |网卡|正常|
 |睡眠|尚不完美,持续调试中|
 |USB|正常,USBPorts.kext为定制驱动|
 
-## **主要驱动**
+## **驱动说明**
 
-|驱动|版本|
-|-----------------|----|
-|Lilu.kext|1.5.3|
-|VirtualSMC.kext|1.2.3|
-|WhateverGreen.kext|1.5.0|
-|RealtekRTL8111.kext|2.3.0d7|
-|AppleALC.kext|1.6.0|
+|驱动|版本|说明|
+|-----------------|----|------|
+|Lilu.kext|1.5.4|核心扩展|
+|AppleALC.kext|1.6.1|用于驱动 ALC 芯片声卡|
+|WhateverGreen.kext|1.5.0|显卡补丁集|
+|RealtekRTL8111.kext|2.3.0d7|用于驱动 RTL8111 有线以太网卡|
+|VirtualSMC.kext|1.2.4|模拟系统 SMC 以及提供了一些传感器插件|
+|SMCProcessor.kext|1.2.4|给CPU提供温度传感器支持|
+|SMCSuperIO.kext|1.2.4|风扇信息读取|
+|CPUFriend.kext|1.2.4|用于提取和应用 CPU 电源管理数据|
+|HibernationFixup.kext|1.4.1|用于修复部分休眠问题|
+|RTCMemoryFixup.kext|1.0.8|RTC 修复|
+|USBInjectAll.kext|0.7.6|用于注入所有 USB 端口|
+|USBPorts.kext|1.0|针对ASUS B360M-K定制的USB端口驱动|
 
 ## **引导及系统版本**
-已经测试支持Catalina全部，Big Sur 11.2.3 
+已经测试支持Catalina，Big Sur 11.3 
 
 ## **加入了2个dsdt补丁**
 
@@ -65,9 +80,27 @@
 |-----------------|-------|
 |SSDT-NameS3-disable.aml|用于禁止S3睡眠，避免睡眠后睡死，需强制关机（笔记本最好勿用）|
 |SSDT-PLUG-_SB.PR00.aml|注入X86，实现CPU电源管理，这个需要根据自己的CPU来选用适合的补丁|
+
 - config里这2个补丁没有勾选，需要的可在OC-little里找到适合自己的。
 
 # **目前版本为：**
+
+**2021-05-20编译OpenCore-0.7.0-05-20编译版**
+
+- 已删除对.icns和.icns支持
+- 添加个性化内容，允许自定义启动图标兼容的图标包
+- 增加了macOS引导条目的自动个性化检测
+- 添加了ProvideCurrentCpuInfo quirk，为Hyper-V虚拟机提供正确的TSC/FSB
+
+**2021-05-18编译OpenCore-0.7.0-05-18编译版**
+
+- 例行更新
+
+**2021-05-16编译OpenCore-0.7.0-05-16编译版**
+
+- 修复在LoadeImage和其他地方处理多节点设备路径的问题
+- 已更改OpenCanopy映像目录以支持目录前缀
+- 已将OpenCanopy首选图像集更改为acidathera\GoldenGate
 
 **2021-05-12编译OpenCore-0.7.0-05-12编译版**
 
