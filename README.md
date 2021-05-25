@@ -85,6 +85,11 @@
 
 # **目前版本为：**
 
+**2021-05-24编译OpenCore-0.7.0-05-24编译版**
+
+- 添加了Hyper-V设备路径扩展以允许设置默认启动卷
+- 添加了GopPassThrough的Apple变体，以仅处理AppleFramebufferInfo句柄
+
 **2021-05-22编译OpenCore-0.7.0-05-22编译版**
 
 - 例行更新
