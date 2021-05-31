@@ -85,6 +85,19 @@
 
 # **目前版本为：**
 
+**2021-05-30编译OpenCore-0.7.0-05-30编译版**
+
+- 增加可选的切换SIP系统启动菜单选项
+- 添加了CsrUtil.efi工具，类似于Apple CsrUtil
+- 删除了对.lbl/.l2x预绘制条目标签的支持
+- 修复了OpenCanopy中控制台模式工具和条目之前未清除的先前文本
+- 修复了GopPassThrough和UgaPassThrough的调试生成崩溃
+- 为内存测试实用程序添加了自定义
+- 在sample.plist文件中更新了推荐的memtest86配置
+- 增加自定义的引导程序风格
+- 在OC构建中应用自定义
+- 添加了CPU拓扑修复，以提供 ProvideCurrentCpuInfo quirk
+
 **2021-05-28编译OpenCore-0.7.0-05-28编译版**
 
 - 例行更新
