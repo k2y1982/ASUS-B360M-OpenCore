@@ -85,6 +85,12 @@
 
 # **目前版本为：**
 
+**2021-06-03编译OpenCore-0.7.0-06-03编译版**
+
+- 添加csr-data Apple NVRAM var到文档
+- 修正文件对齐导致CLANGPDB图像协同设计问题
+- 用AdviseFeatures替换AdviseWindows以支持APFS
+
 **2021-06-01编译OpenCore-0.7.0-06-01编译版**
 
 - 更新OC默认SIP关闭值
