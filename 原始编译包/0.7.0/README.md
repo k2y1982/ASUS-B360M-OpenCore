@@ -1,0 +1,31 @@
+# OC 0.7.0 官方正式版
+
+- 百度翻译
+- 修复了带有写保护引导选项支持的固件上的NVRAM重置
+- 改进了某些情况下的直接GOP渲染器性能
+- 增加了对直接GOP渲染器中显示旋转的支持
+- 修复了在LoadeImage和其他地方处理多节点设备路径的问题
+- 已更改OpenCanopy映像目录以支持目录前缀
+- 已将OpenCanopy首选图像集更改为acidathera\GoldenGate
+- 删除并支持<BOOTPATH>.icns<TOOLPATH>.icns
+- 添加的内容风味系统，允许自定义启动图标兼容的图标包
+- 增加了macOS引导条目的自动味道检测
+- 添加了为Hyper-V虚拟机提供正确TSC/FSB的怪癖提供当前CPUInfo
+- 添加了Hyper-V设备路径扩展以允许设置默认启动卷
+- 添加的变体仅处理HandlesAppleGoppassThroughHappleFrameBufferInfo
+- 修复了由于架构不匹配而跳过修补程序时未处理的其他内核修补程序
+- 添加了可选的切换SIP系统启动菜单选项
+- 添加了类似于Apple CsrUtil.eficsrutil的工具
+- 删除了对/预绘制条目标签<TOOLPATH>.lbl.l2x的支持
+- 修复了OpenCanopy中控制台模式工具和条目之前未清除的先前文本
+- 修复了与和goppassthroughagapassthrough的调试生成崩溃
+- 增加了内存测试实用程序的味道
+- 更新了示例文件memtest86.plist中的建议配置
+- 定义的引导程序风格
+- 将自己的口味应用到OC构建中
+- 为QuirkProviderCurrentCpuInfo添加了CPU拓扑修复
+- 更新的OC默认SIP禁用值
+- 记录的影响macOS更新的SIP值
+- 将Apple NVRAM var添加到docscsr数据
+- 修复了导致GPDB映像的代码设计问题的文件对齐问题
+- 替换为以支持apfsAdviseWindowsAdvise功能
