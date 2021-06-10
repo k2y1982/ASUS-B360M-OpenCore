@@ -9,7 +9,7 @@
 |igfxfw=2|引导参数（和属性），以强制加载苹果GuC固件|
 |igfxrpsc=1|引导参数（属性）以启用RPS控制修补程序（提高IGPU性能）测试中|
 |npci=0x3000|解决独立显卡PCIconfiguration begin卡主不动|
-|-lilubeta|在不受支持的 Darwin 版本启用 Lilu|
+|-lilubetaall|在不受支持的 OS 版本启用 Lilu的所有插件|
 
 - 据说igfxfw=2会导致核显频率过高死机，现在正在测试igfxrpsc=1。
 
@@ -17,7 +17,7 @@
 
 ## **支持Monterey 12.0beta 安装：**
 
-- 增加了 -lilubeta 参数，以支持 VirtualSMC的IO信息获取
+- 增加了 -lilubetaall 参数，以支持 VirtualSMC的IO信息获取，ALC的音频模拟。
 
 - 截至今日 monterey的蓝牙问题还没有解决，勾选 XhciPortLimit 解决USB无法识别的问题。
 
