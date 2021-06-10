@@ -15,7 +15,7 @@
 
 - 下载系统和系统写入u盘可以看看上面的[wiki](https://gitee.com/k2y1982/OC/wikis)。
 
-# **支持Monterey 12.0beta 安装：**
+## **支持Monterey 12.0beta 安装：**
 
 - 增加了 -lilubeta 参数，以支持 VirtualSMC的IO信息获取
 
@@ -23,7 +23,7 @@
 
 - 微信闪退可以安装3.1.0beta10版本，别的软件闪退只能等软件更新，并没有别的办法。
 
-# **为配合 big sur 安装特性已做如下修改：** 
+## **为配合 big sur 安装特性已做如下修改：** 
 
 - 最新的正式版和Big Sur beta版已支持中文，SecureBootModel 也可以设置为 Default
 
@@ -33,7 +33,7 @@
 
 - 不然会遇到-v代码跑完-进度条跑完后只有灰屏和鼠标(big sur beta10 全新安装时)。
 
-# **如果你是安装 Catalina 可以将：** 
+## **如果你是安装 Catalina 可以将：** 
 
 - 1.Misc - Security - SecureBootModel 已设置为 Default (默认已改回Default）
 
@@ -41,7 +41,7 @@
 
 - 2.NVRAM - 7C436110-AB2A-4BBB-A880-FE41995C9F82 - prev-lang:kbd 已设置为中文(默认已改回中文) 7A682D48 616E733A 323532
 
-# **配置**
+## **配置**
 
 |设备|型号|
 |--|-------------------|
@@ -80,9 +80,9 @@
 |USBInjectAll.kext|0.7.7|用于注入所有 USB 端口|
 
 ## **引导及系统版本**
-已经测试支持Catalina，Big Sur 11.4,Monterey 12.0 beta
+已经测试支持Catalina，Big Sur，Monterey beta
 
-# **目前版本为：**
+## **目前版本为：**
 
 **2021-06-10编译OpenCore-0.7.1-06-10编译版**
 
