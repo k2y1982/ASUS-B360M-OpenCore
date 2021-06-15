@@ -84,6 +84,16 @@
 
 ## **目前版本为：**
 
+**2021-06-14编译OpenCore-0.7.1-06-14编译版**
+
+- 更新SMBIOS和其他系统的内置固件版本
+- 修正macOS 12上的PowerTimeoutKernelPanic
+- 修复OpenCanopy引导条目上的透明点击检测
+- 已将PCI设备信息转储添加到SysReport
+- 修正macOS 12上的SetApfsTrimTimeout
+- 记录并添加现有要求的安全回退，设置默认宽度以匹配选择器宽度
+
+
 **2021-06-10编译OpenCore-0.7.1-06-10编译版**
 
 - 更新版本号至0.7.1
