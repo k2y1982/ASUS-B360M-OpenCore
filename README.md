@@ -9,7 +9,7 @@
 |igfxfw=2|引导参数（和属性），以强制加载苹果GuC固件|
 |igfxrpsc=1|引导参数（属性）以启用RPS控制修补程序（提高IGPU性能）测试中|
 |npci=0x3000|解决独立显卡PCIconfiguration begin卡主不动|
-|-lilubetaall|在不受支持的 OS 版本启用 Lilu的所有插件|
+|-lilubetaall|在不受支持的 OS 版本启用 Lilu的所有插件，主要是在12上用|
 
 - 据说igfxfw=2会导致核显频率过高死机，现在正在测试igfxrpsc=1。
 
@@ -74,9 +74,6 @@
 |VirtualSMC.kext|1.2.5|模拟系统 SMC 以及提供了一些传感器插件|
 |SMCProcessor.kext|1.2.5|给CPU提供温度传感器支持|
 |SMCSuperIO.kext|1.2.5|风扇信息读取|
-|CPUFriend.kext|1.2.4|用于提取和应用 CPU 电源管理数据|
-|HibernationFixup.kext|1.4.1|用于修复部分休眠问题|
-|RTCMemoryFixup.kext|1.0.8|RTC 修复|
 |USBInjectAll.kext|0.7.7|用于注入所有 USB 端口|
 
 ## **引导及系统版本**
