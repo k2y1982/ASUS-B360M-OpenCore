@@ -83,6 +83,10 @@
 
 ## **目前版本为：**
 
+**2021-06-24编译OpenCore-0.7.1-06-24编译版**
+
+- 修复在OpenCanopy中按change entry键和单个启动项时的DEBUG ASSERT
+
 **2021-06-22编译OpenCore-0.7.1-06-22编译版**
 
 - 修正了IA32上内置picker的错误超时
