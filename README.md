@@ -2,19 +2,19 @@
 
 - 不是自己编译版 基本包为 独行秀才 的编译包
 
-- 无需添加显卡ID，自动驱动。
+- 有独显或独显+核显加速无需添加显卡ID，自动驱动。只有核显请看下一条。
 
-- 此主板只用核显+DVI的配置已经测试成功，配置文件会放在包里。[关于FB的设置可以看这里。](https://bbs.pcbeta.com/viewthread-1894078-1-1.html)
+- 此主板只用核显+DVI的配置已经测试成功，配置文件会放在[这里](https://gitee.com/k2y1982/OC/tree/master/%E6%A0%B8%E6%98%BE+DVI%E6%8E%A5%E5%8F%A3FB%E5%B8%A7%E7%BC%93%E5%86%B2)。
 
 - 写了一个从应用程序创建dmg安装镜像，把dmg镜像写入u盘，dmg镜像转iso的脚本，使用中有问题的请反馈我。
 
 |启动参数|说明|
 |-----------------|-------|
-|igfxfw=2|引导参数（和属性），以强制加载苹果GuC固件|
-|igfxrpsc=1|引导参数（属性）以启用RPS控制修补程序（提高IGPU性能）|
+|igfxfw=2|引导参数（和属性），以强制加载苹果GuC固件-不怎么用|
+|igfxrpsc=1|引导参数（属性）以启用RPS控制修补程序（提高IGPU性能）-不怎么用|
 |npci=0x3000|解决独立显卡PCIconfiguration begin卡主不动|
-|-lilubetaall|在不受支持的 OS 版本启用 Lilu的所有插件，主要是在12上用|
-|igfxonln=1|所有显示接口在线|
+|-lilubetaall|在不受支持的 OS 版本启用 Lilu的所有插件-主要是在12上用|
+|igfxonln=1|所有显示接口在线-只有核显专用|
 
 - 随着驱动的升级，以上参数已不是必备的了，我现在只用独显时，只加了 alcid=5 ，同样能正常使用。
 
@@ -22,7 +22,7 @@
 
 - igfxonln=1 npci=0x3000 只用核显的时候必须用，不然会进桌面黑屏。
 
-- 下载系统和系统写入u盘可以看看上面的[wiki](https://gitee.com/k2y1982/OC/wikis)。
+- 下载系统和系统写入u盘可以看看上面的[wiki](https://gitee.com/k2y1982/OC/wikis)，或直接用我写的小[脚本](https://gitee.com/k2y1982/OC/tree/master/%E8%84%9A%E6%9C%AC)。
 
 - 如果你的黑果也死机频繁，可以试试把内存频率由自动改为手动设置，如：我的内存是2666，手动设置2600后暂没有再死机了。
 
@@ -30,9 +30,9 @@
 
 - 增加了 -lilubetaall 参数，以支持 VirtualSMC的IO信息获取，ALC的音频模拟。
 
-- 截至23日 monterey的蓝牙问题部分解决，勾选 XhciPortLimit 解决USB无法识别的问题。
+- 截至7月6日 monterey的蓝牙问题大部分解决，需要用到[BlueToolFixup.kext](https://gitee.com/k2y1982/OC/tree/master/%E9%A9%B1%E5%8A%A8)。
 
-- 微信闪退可以安装3.1.0beta10版本，别的软件闪退只能等软件更新，并没有别的办法。
+- 软件闪退只能等软件更新，并没有别的办法。
 
 ## **为配合 big sur 安装特性已做如下修改：** 
 
