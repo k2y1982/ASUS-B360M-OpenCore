@@ -94,6 +94,10 @@
 
 ## **目前版本为：**
 
+**2021-07-10编译OpenCore-0.7.2-07-10编译版**
+
+- 对OSBundleLibraries/osbundlelibraries64进行了修复
+
 **2021-07-08编译OpenCore-0.7.2-07-08编译版**
 
 - 更新版本号至0.7.2
