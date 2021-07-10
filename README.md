@@ -20,7 +20,7 @@
 
 - 同时开启核显和独显的时候，还是需要加上 ```npci=0x3000``` 。
 
-- ```igfxonln=1 npci=0x3000``` 只用核显的时候必须用，不然会进桌面黑屏。
+- 只用核显的时候必须用，不然会进桌面黑屏 ```igfxonln=1 npci=0x3000``` 。
 
 - 下载系统和系统写入u盘可以看看上面的[wiki](https://gitee.com/k2y1982/OC/wikis)，或直接用我写的小[脚本](https://gitee.com/k2y1982/OC/tree/master/%E8%84%9A%E6%9C%AC)。
 
