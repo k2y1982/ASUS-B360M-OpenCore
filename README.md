@@ -16,11 +16,11 @@
 |-lilubetaall|在不受支持的 OS 版本启用 Lilu的所有插件-主要是在12上用|
 |igfxonln=1|所有显示接口在线-只有核显专用|
 
-- 随着驱动的升级，以上参数已不是必备的了，我现在只用独显时，只加了 alcid=5 ，同样能正常使用。
+- 随着驱动的升级，以上参数已不是必备的了，我现在只用独显时，只加了 ```alcid=5``` ，同样能正常使用。
 
-- 同时开启核显和独显的时候，还是需要加上 npci=0x3000 。
+- 同时开启核显和独显的时候，还是需要加上 ```npci=0x3000``` 。
 
-- igfxonln=1 npci=0x3000 只用核显的时候必须用，不然会进桌面黑屏。
+- ```igfxonln=1 npci=0x3000``` 只用核显的时候必须用，不然会进桌面黑屏。
 
 - 下载系统和系统写入u盘可以看看上面的[wiki](https://gitee.com/k2y1982/OC/wikis)，或直接用我写的小[脚本](https://gitee.com/k2y1982/OC/tree/master/%E8%84%9A%E6%9C%AC)。
 
@@ -28,29 +28,21 @@
 
 ## **支持Monterey 12.0beta 安装：**
 
-- 增加了 -lilubetaall 参数，以支持 VirtualSMC的IO信息获取，ALC的音频模拟。
+- ~~增加了 ```-lilubetaall``` 参数，以支持 VirtualSMC的IO信息获取，ALC的音频模拟。~~ 更新驱动后已不再需要。
+
+- Monterey B2 安装时需要将 ```SecureBootModel``` 设置为 ```disable```。
 
 - 截至7月6日 monterey的蓝牙问题大部分解决，需要用到[BlueToolFixup.kext](https://gitee.com/k2y1982/OC/tree/master/%E9%A9%B1%E5%8A%A8)。
 
 - 软件闪退只能等软件更新，并没有别的办法。
 
-## **为配合 big sur 安装特性已做如下修改：** 
+## **其它说明**
 
-- 最新的正式版和Big Sur beta版已支持中文，SecureBootModel 也可以设置为 Default
+- ```SecureBootModel``` 默认设置为 ```disable```，Catalina,Big sur,Monterey,都可以正常安装，安装完后可以改回```default```。
 
-- 如果你还是beta10的镜像请将 NVRAM - 7C436110-AB2A-4BBB-A880-FE41995C9F82 - prev-lang:kbd 已设置为英语 656E2D55533A30
+- ```prev-lang:kbd``` 默认设置为 ```7A682D48 616E733A 323532``` (中文)
 
-- 如果你之前已经安装过macOS，在更改efi后，请在oc的辅助项里 使用一次 reset_NVRAM 以清理 NVRAM。
-
-- 不然会遇到-v代码跑完-进度条跑完后只有灰屏和鼠标(big sur beta10 全新安装时)。
-
-## **如果你是安装 Catalina 可以将：** 
-
-- 1.Misc - Security - SecureBootModel 已设置为 Default (默认已改回Default）
-
-- 这样就不会遇到挂在efi分区时occ卡死的问题。
-
-- 2.NVRAM - 7C436110-AB2A-4BBB-A880-FE41995C9F82 - prev-lang:kbd 已设置为中文(默认已改回中文) 7A682D48 616E733A 323532
+- 最新版的OC可以勾选 ```AllowToggleSip``` 来开关SIP。
 
 ## **配置**
 
@@ -73,7 +65,7 @@
 |网卡|正常|
 |睡眠|正常|
 |USB|正常|
-|运行状态|内存频率由自动改为2600后死机机率降低，待测试|
+|运行状态|内存频率由自动改为2600后已不再死机|
 
 ## **驱动说明**
 
@@ -87,7 +79,7 @@
 |SMCProcessor.kext|1.2.6|给CPU提供温度传感器支持|
 |SMCSuperIO.kext|1.2.6|风扇信息读取|
 |USBInjectAll.kext|0.7.7|用于注入所有 USB 端口|
-|BlueToolFixup.kext|2.6.0|monterey蓝牙修复|
+|BlueToolFixup.kext|2.6.0|Monterey蓝牙修复|
 
 ## **引导及系统版本**
 已经测试支持Catalina，Big Sur，Monterey beta
