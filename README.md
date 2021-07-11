@@ -44,6 +44,16 @@
 
 - 最新版的OC可以勾选 ```AllowToggleSip``` 来开关SIP。
 
+## **安装完成后的设置**
+
+- 如果你的bios可以关闭cfg ```AppleCpuPmCfgLock ppleXcpmCfgLock gnoreInvalidFlexRatio``` 可以不用勾上。
+
+- ```SecureBootModel``` 可以设置为 ```Default```,如果你定制了USB ```XhciPortLimit``` 可以不用勾上。
+
+- 如果你是固态的SATA硬盘 可以 勾上 ```ThirdPartyDrives``` 以开启硬盘的TRIM。
+
+- ```ScanPolicy``` 可以根据你自己设备进行设置，```boot-args``` 里的 ```-v``` 删掉就不再跑码。
+
 ## **配置**
 
 |设备|型号|
