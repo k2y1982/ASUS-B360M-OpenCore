@@ -96,6 +96,10 @@
 
 ## **目前版本为：**
 
+**2021-07-16编译OpenCore-0.7.2-07-16编译版**
+
+- 增加了对stack canaries的支持（安全cookies/堆栈保护）
+
 **2021-07-14编译OpenCore-0.7.2-07-14编译版**
 
 - 添加GraphicsInputMirroring以修复一些非Apple图形UEFI应用程序中键盘失效问题
