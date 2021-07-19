@@ -96,6 +96,12 @@
 
 ## **目前版本为：**
 
+**2021-07-18编译OpenCore-0.7.2-07-18编译版**
+
+- 修复AudioDxe中未初始化的内存访问导致音频播放失败的问题
+- 为更好的安全性和兼容性，将默认苹果安全启动模式改为x86legacy
+- macOS Big Sur 增加默认APFS MinDate和MinVersion，以获得更好的安全性
+
 **2021-07-16编译OpenCore-0.7.2-07-16编译版**
 
 - 增加了对stack canaries的支持（安全cookies/堆栈保护）
