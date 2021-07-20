@@ -54,6 +54,23 @@
 
 - ```ScanPolicy``` 可以根据你自己设备进行设置，```boot-args``` 里的 ```-v``` 删掉就不再跑码。
 
+## **BIOS设置**
+
+|打开|关闭|
+|---|---|
+|VT-x|Fast Boot|
+|Above 4G decoding|Secure Boot|
+|Hyper-Threading|Serial/COM Port|
+|Execute Disable Bit|Parallel Port|
+|EHCI/XHCI Hand-off|VT-d (can be enabled if you set DisableIoMapper to YES)|
+|OS type: Windows 8.1/10 UEFI Mode|CSM|
+|DVMT Pre-Allocated(iGPU Memory): 64MB|Thunderbolt(For initial install, as Thunderbolt can cause issues if not setup correctly)|
+|SATA Mode: AHCI|Intel SGX|
+||Intel Platform Trust|
+|资料来自OpenCore Install Guide|CFG Lock (MSR 0xE2 write protection)(This must be off, if you can't find the option then enable ```AppleXcpmCfgLock```|
+|BIOS里能找到几个就开关几个|under Kernel -> Quirks. Your hack will not boot with CFG-Lock enabled)|
+
+
 ## **配置**
 
 |设备|型号|
