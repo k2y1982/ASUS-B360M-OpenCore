@@ -62,13 +62,13 @@
 |Above 4G decoding|Secure Boot|
 |Hyper-Threading|Serial/COM Port|
 |Execute Disable Bit|Parallel Port|
-|EHCI/XHCI Hand-off|VT-d (can be enabled if you set DisableIoMapper to YES)|
+|EHCI/XHCI Hand-off|VT-d (如果将DisableIoMapper设置为YES，则可以启用)|
 |OS type: Windows 8.1/10 UEFI Mode|CSM|
-|DVMT Pre-Allocated(iGPU Memory): 64MB|Thunderbolt(For initial install, as Thunderbolt can cause issues if not setup correctly)|
+|DVMT Pre-Allocated(iGPU Memory): 64MB|Thunderbolt(对于初始安装，因为Thunderbolt如果设置不正确可能会导致问题)|
 |SATA Mode: AHCI|Intel SGX|
-||Intel Platform Trust|
-|资料来自OpenCore Install Guide|CFG Lock (MSR 0xE2 write protection)(This must be off, if you can't find the option then enable ```AppleXcpmCfgLock```|
-|BIOS里能找到几个就开关几个|under Kernel -> Quirks. Your hack will not boot with CFG-Lock enabled)|
+|```备注```|Intel Platform Trust|
+|```资料来自OpenCore Install Guide```|CFG Lock (MSR 0xE2写保护)(必须关闭此选项，如果找不到该选项，请启用 ```AppleXcpmCfgLock```)|
+|```BIOS里能找到几个就开关几个```|```你的bios无法关闭 CFG-Lock ，请打开 Kernel -> Quirks.``` |
 
 
 ## **配置**
@@ -112,6 +112,10 @@
 已经测试支持Catalina，Big Sur，Monterey beta
 
 ## **目前版本为：**
+
+**2021-07-22编译OpenCore-0.7.2-07-22编译版**
+
+- 例行更新
 
 **2021-07-20编译OpenCore-0.7.2-07-20编译版**
 
