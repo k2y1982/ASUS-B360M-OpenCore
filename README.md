@@ -66,9 +66,9 @@
 |OS type: Windows 8.1/10 UEFI Mode|CSM|
 |DVMT Pre-Allocated(iGPU Memory): 64MB|Thunderbolt(对于初始安装，因为Thunderbolt如果设置不正确可能会导致问题)|
 |SATA Mode: AHCI|Intel SGX|
-|```备注```|Intel Platform Trust|
-|```资料来自OpenCore Install Guide```|CFG Lock (MSR 0xE2写保护)(必须关闭此选项，如果找不到该选项，请启用 ```AppleXcpmCfgLock```)|
-|```BIOS里能找到几个就开关几个```|```你的bios无法关闭 CFG-Lock ，请打开 Kernel -> Quirks.``` |
+|备注|Intel Platform Trust|
+|资料来自OpenCore Install Guide|CFG Lock (MSR 0xE2写保护)(必须关闭此选项，如果找不到该选项，请启用 AppleXcpmCfgLock)|
+|BIOS里能找到几个就开关几个|如果你的bios无法关闭 CFG-Lock ，请打开 Kernel -> Quirks.|
 
 
 ## **配置**
@@ -112,6 +112,11 @@
 已经测试支持Catalina，Big Sur，Monterey beta
 
 ## **目前版本为：**
+
+**2021-07-26编译OpenCore-0.7.2-07-26编译版**
+
+- 改进了SSDT-PNLF与Windows和更新图形的兼容性
+- 通过缩短OC magic改善CLANGPDB OpenCore的构建
 
 **2021-07-22编译OpenCore-0.7.2-07-22编译版**
 
