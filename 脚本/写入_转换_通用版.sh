@@ -86,6 +86,19 @@ function diskutility() {
 	open /System/Applications/Utilities/Disk\ Utility.app
 }
 
+function file_to_iso() {
+	title "将文件夹转换为ISO ISO将会以文件夹名在同目录创建"
+	# 在桌面创建file_to_iso.sh
+	touch ~/Desktop/file_to_iso.sh
+	# 将文件夹拖入终端
+	read -r -p '将要创建ISO的文件夹拖入终端：' filetoiso
+	echo "hdiutil makehybrid -o $filetoiso.iso $filetoiso" > ~/Desktop/file_to_iso.sh
+	echo "rm -f ~/Desktop/file_to_iso.sh" >> ~/Desktop/file_to_iso.sh
+	chmod u+x ~/Desktop/file_to_iso.sh
+	open ~/Desktop/file_to_iso.sh
+}
+
+
 function quite() {
 	# echo '我是密码'|sudo -S kill -9 $(ps -ef|grep Terminal |awk '$0 !~/grep/ {print $2}' |tr -s '\n' ' ')
 	osascript -e "tell application \"System Events\" to keystroke \"q\" using command down"
@@ -100,9 +113,10 @@ function usage() {
 
 1) ${NORMAL} 从应用程序生成 macOS_install.dmg
 2) ${NORMAL} 将镜像改为 ISO格式
-3) ${NORMAL} 打开 磁盘工具
-4) ${NORMAL} 从应用程序写入 U盘
-5) ${NORMAL} 将镜像写入 U盘
+3) ${NORMAL} 从文件夹 创建ISO
+4) ${NORMAL} 打开 磁盘工具
+5) ${NORMAL} 从应用程序写入 U盘
+6) ${NORMAL} 将镜像写入 U盘
 q) ${NORMAL} [退出]
 
 选择: ${NORMAL}"
@@ -116,9 +130,10 @@ function main_menu() {
 		case $cmd in   # 这里内容自由发挥
 		'1') build_app ;;
 		'2') dmg_iso ;;
-		'3') diskutility ;;
-		'4') app_to_u ;;
-		'5') dmg_to_u ;;
+		'3') file_to_iso ;;
+		'4') diskutility ;;
+		'5') app_to_u ;;
+		'6') dmg_to_u ;;
 		'q') quite ;;
 		*) echo -e $RED"错误选项."$NORMAL ;;
 		esac
