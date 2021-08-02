@@ -111,6 +111,10 @@
 ## **引导及系统版本**
 已经测试支持Catalina，Big Sur，Monterey beta
 
+**2021-08-01编译OpenCore-0.7.2-08-01编译版**
+
+- 更新Docs/Kexts.md
+
 ## **目前版本为：**
 
 **2021-07-30编译OpenCore-0.7.2-07-30编译版**
