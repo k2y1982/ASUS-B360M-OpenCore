@@ -1,18 +1,21 @@
-# OC 0.7.6 官方正式版
+# OC 0.7.7 官方正式版
 
-- 修复了使用GCC编译时的堆栈金丝雀支持
-- 增加了自动比例因子检测
-- 显式将ResizeApplePubars限制为0和-1
-- 修复了OpenCanopy长标签在图形背景上淡出的问题
-- 修复了PROVIDECOLEGOP未禁用仅限blit模式的问题（例如，在Z690上）
-- 修复了Alder Lake SMBIOS CPU型号信息
-- 为Intel Alder Lake添加了XCPM CPU电源管理ACPI表
-- 更新了绘图顺序，以避免OpenCorporation中的图形撕裂
-- 修复了ScanPolicy中使用逻辑单元处理PCI设备路径的问题
-- 添加了重新连接图形用于启用可选UEFI图形驱动程序的连接选项
-- 添加了BiosVideo.efi驱动程序，用于重新连接图形连接
-- 更改了FadtEnableReset，以避免不可靠的键盘控制器重置
-- 添加了EnableVmx怪癖，允许在某些Mac上的其他操作系统中进行虚拟化
-- 升级了ProtectUefiServices，以防止在启用安全引导的情况下进行链加载时GRUB垫片覆盖服务指针
-- 已删除不推荐的SSDT-PNLFCFL
-- 修复了零大小内存属性表的处理
+- 修复了由入口点中的寄存器损坏导致的罕见崩溃
+- 添加了对Intel Alder Lake的ProvideCurrentCpuInfo支持
+- 修复了针对英特尔火箭湖及更新版本的Cpuid1Data建议中的打字错误
+- 更新了SMBIOS和其他系统的内置固件版本
+- 将基础EDK II包更新为edk2-stable202111
+- 使用AudioDxe解决QEMU中的崩溃
+- 添加了AudioDxe设置缓存（避免不必要的设置延迟）
+- 添加了DisconnectHda怪癖，允许在苹果和其他硬件上使用UEFI声音
+- 为QEMU intel hda驱动程序中的bug添加了解决方法，以允许QEMU中出现UEFI声音
+- 使用AudioOutMask实现多声道（如低音+主扬声器；扬声器+耳机）UEFI声音
+- 修复了Nvidia HDA音频存在时AudioDxe启动暂停的问题
+- 解决了AudioDxe在某些固件上禁用Windows中的声音的问题
+- 在内置AppleEvent实现中添加了指针轮询周期调整
+- 在内置AppleeEvent实现中添加了指针设备列表调整
+- 添加了VREF处理，以在更多苹果硬件上支持UEFI声音
+- 更新音频输出通道检测，在更多苹果硬件上支持UEFI声音
+- 添加了手动GPIO配置（在Apple硬件上为UEFI声音使用--GPIO设置AudioDxe驱动程序参数）
+- 将UEFI音频电平切换为分贝增益，以便准确匹配已保存的macOS音量
+- 最小音频辅助音量和最小音频音量的单独设置
