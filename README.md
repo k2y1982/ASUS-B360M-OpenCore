@@ -142,9 +142,11 @@
 
 ## **目前版本为：**
 
-**2022-01-12日更版OpenCore-0.7.8-01-12开发版**
+**2022-01-13编译OpenCore-0.7.8-01-13编译版**
 
-- 更新了ocvalidate以警告使用安全的“SecureBootModel”的不安全的“DmgLoading”（在运行时已被禁止）
+- 更新版本号为0.7.8
+- 更新ocvalidate，对不安全的' DmgLoading '与安全的' SecureBootModel '(在运行时已经不允许)发出警告
+- 修正了AudioDxe在0.7.7更新后不会禁用未使用的通道
 
 **2022-01-11编译OpenCore-0.7.7-01-11正式版**
 
