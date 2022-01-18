@@ -2,7 +2,10 @@ OpenCore Changelog
 ==================
 #### v0.7.8
 - Updated ocvalidate to warn about insecure `DmgLoading` with secure `SecureBootModel` (already disallowed in runtime)
-- Fixed AudioDxe not disabling unused channels after 0.7.7 updates
+- Fixed AudioDxe not disabling unused channels after recent updates
+- Allow gain to track OS volume on old macOS without `SystemAudioVolumeDB`
+- Fixed crash on no mouse support when verifying password
+- Fixed AppleInternal CSR bit being set with `ProvideCustomSlide` enabled
 
 #### v0.7.7
 - Fixed rare crash caused by register corruption in the entry point
