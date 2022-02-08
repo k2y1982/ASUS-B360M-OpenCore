@@ -1,4 +1,4 @@
-# ASUS PRIME B360M-K i5 8600k OC0.7.8开发版
+# ASUS PRIME B360M-K i5 8600k OC0.7.9 开发版
 
 - 不是自己编译，基本包为 独行秀才 的编译包 和 dortania/build-repo 的编译包。有更新的时候同步更新。
 

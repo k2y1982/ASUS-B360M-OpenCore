@@ -1,21 +1,14 @@
-# OC 0.7.7 官方正式版
+# OC 0.7.8 官方正式版
 
-- 修复了由入口点中的寄存器损坏导致的罕见崩溃
-- 添加了对Intel Alder Lake的ProvideCurrentCpuInfo支持
-- 修复了针对英特尔火箭湖及更新版本的Cpuid1Data建议中的打字错误
+- 更新了ocvalidate，以警告使用secure SecureBootModel加载不安全的DmgLoading（在运行时已被禁止）
+- 修复了AudioDxe最近更新后未禁用未使用频道的问题
+- 允许gain在没有SystemAudioVolumeDB的情况下跟踪旧macOS上的操作系统音量
+- 修复了验证密码时没有鼠标支持的崩溃问题
+- 修复了启用ProvideCustomSlide时设置的AppleInternal CSR位
+- 增加了对的支持。满足口味和口味。启动条目协议条目的contentDetails文件，包括OpenLinuxBoot
+- 在OpenLinuxBoot中添加了LINUX_BOOT_ADD_RW标志，以支持例如奋进
+- 在OpenLinuxBoot中添加了flags+=和flags-=参数，以在需要时简化驱动程序标志的设置
+- 修复了当LINUX_BOOT_USE_LATEST标志清除时OpenLinuxBoot条目名称的歧义
 - 更新了SMBIOS和其他系统的内置固件版本
-- 将基础EDK II包更新为edk2-stable202111
-- 使用AudioDxe解决QEMU中的崩溃
-- 添加了AudioDxe设置缓存（避免不必要的设置延迟）
-- 添加了DisconnectHda怪癖，允许在苹果和其他硬件上使用UEFI声音
-- 为QEMU intel hda驱动程序中的bug添加了解决方法，以允许QEMU中出现UEFI声音
-- 使用AudioOutMask实现多声道（如低音+主扬声器；扬声器+耳机）UEFI声音
-- 修复了Nvidia HDA音频存在时AudioDxe启动暂停的问题
-- 解决了AudioDxe在某些固件上禁用Windows中的声音的问题
-- 在内置AppleEvent实现中添加了指针轮询周期调整
-- 在内置AppleeEvent实现中添加了指针设备列表调整
-- 添加了VREF处理，以在更多苹果硬件上支持UEFI声音
-- 更新音频输出通道检测，在更多苹果硬件上支持UEFI声音
-- 添加了手动GPIO配置（在Apple硬件上为UEFI声音使用--GPIO设置AudioDxe驱动程序参数）
-- 将UEFI音频电平切换为分贝增益，以便准确匹配已保存的macOS音量
-- 最小音频辅助音量和最小音频音量的单独设置
+- 修复了部分（重新）安装Linux发行版的OpenLinuxBoot中的崩溃
+- 改进了错误PE图像文件解析的健壮性
