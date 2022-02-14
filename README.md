@@ -142,6 +142,16 @@
 
 ## **目前版本为：**
 
+**2022-02-13编译OpenCore-0.7.9-02-13编译版**
+
+- 更新版本号为0.7.9
+- 添加自动检测macOS安装程序卷名，以便在安装时使用 .disk_label文件无法正常显示。
+- 添加--restore-nosnoop 标志恢复到AudioDxe，修复v0。7.7 Windows声音选择
+- 增加一个新方法，当SetApfsTrimTimeout设置为0时禁用修剪 修正了macOS 12上的SetApfsTrimTimeout（仅在设置为零时有效）
+- 为macrecovery添加了构建qemu恢复映像的脚本
+- 修复了在虚拟机监控程序上选择SecureBootModel的问题（应该是x86legacy）
+- 为预链接和更新版本添加了kext阻止策略 添加了全局MSR 35h修复程序以提供当前CPUINFO，允许KVM中的-cpu主机
+
 **2022-02-08编译OpenCore-0.7.8-02-08正式版**
 
 - 更新了ocvalidate，以警告使用secure SecureBootModel加载不安全的DmgLoading（在运行时已被禁止）
