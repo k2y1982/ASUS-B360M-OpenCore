@@ -129,7 +129,7 @@
 |BlueToolFixup.kext|2.6.2|Monterey蓝牙修复||
 |Lilu.kext|1.6.1|核心扩展|new~!|
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
-|USBInjectAll.kext|0.7.7|用于注入所有 USB 端口||
+|USBInjectAll.kext|0.7.8|用于注入所有 USB 端口|new~!|
 |VirtualSMC.kext|1.2.9|模拟系统 SMC 以及提供了一些传感器插件||
 |WhateverGreen.kext|1.5.8|显卡补丁集|new~!|
 ** **
