@@ -1,4 +1,4 @@
-# ASUS PRIME B360M-K i5 8600k OC0.7.9 开发版
+# ASUS PRIME B360M-K i5 8600k OC0.8.0 开发版
 
 - 不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。
 
@@ -141,6 +141,11 @@
 ** **
 
 ## **目前版本为：**
+
+**2022-03-13编译OpenCore-0.8.0-03-13编译版**
+
+- 更新版本号为0.8.0
+- 支持早期日志的保存
 
 **2022-03-3编译OpenCore-0.7.9-03-03编译版**
 
