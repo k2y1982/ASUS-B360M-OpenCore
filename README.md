@@ -142,6 +142,11 @@
 
 ## **目前版本为：**
 
+**2022-03-13编译OpenCore-0.8.0-03-23编译版**
+
+- 在脚本中切换到Python 3(使用Python /path/to/script强制Python 2)
+- 增加ForceAquantiaEthernet项，支持aququantia AQtion基于AQC-107s的10GbE网卡，感谢@Mieze和@Shikumo
+- 更新SMBIOS和其他内置固件版本
 
 **2022-03-13编译OpenCore-0.8.0-03-13编译版**
 
@@ -165,18 +170,3 @@
 - 为macrecovery添加了构建qemu恢复映像的脚本
 - 修复了在虚拟机监控程序上选择SecureBootModel的问题（应该是x86legacy）
 - 为预链接和更新版本添加了kext阻止策略 添加了全局MSR 35h修复程序以提供当前CPUINFO，允许KVM中的-cpu主机
-
-**2022-02-08编译OpenCore-0.7.8-02-08正式版**
-
-- 更新了ocvalidate，以警告使用secure SecureBootModel加载不安全的DmgLoading（在运行时已被禁止）
-- 修复了AudioDxe最近更新后未禁用未使用频道的问题
-- 允许gain在没有SystemAudioVolumeDB的情况下跟踪旧macOS上的操作系统音量
-- 修复了验证密码时没有鼠标支持的崩溃问题
-- 修复了启用ProvideCustomSlide时设置的AppleInternal CSR位
-- 增加了对的支持。满足口味和口味。启动条目协议条目的contentDetails文件，包括OpenLinuxBoot
-- 在OpenLinuxBoot中添加了LINUX_BOOT_ADD_RW标志，以支持例如奋进
-- 在OpenLinuxBoot中添加了flags+=和flags-=参数，以在需要时简化驱动程序标志的设置
-- 修复了当LINUX_BOOT_USE_LATEST标志清除时OpenLinuxBoot条目名称的歧义
-- 更新了SMBIOS和其他系统的内置固件版本
-- 修复了部分（重新）安装Linux发行版的OpenLinuxBoot中的崩溃
-- 改进了错误PE图像文件解析的正确性
