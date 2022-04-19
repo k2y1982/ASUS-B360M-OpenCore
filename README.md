@@ -1,4 +1,4 @@
-# ASUS PRIME B360M-K i5 8600k OC0.8.0 开发版
+# ASUS PRIME B360M-K i5 8600k OC0.8.1 开发版
 
 - 不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。
 
@@ -142,6 +142,15 @@
 
 ## **目前版本为：**
 
+**2022-04-19编译OpenCore-0.8.0-04-19正式版**
+
+- 增加了对早期日志保存的支持
+- 在脚本中切换到Python 3(使用Python /path/to/script强制Python 2)
+- 增加ForceAquantiaEthernet项，支持aququantia AQtion基于AQC-107s的10GbE网卡，感谢@Mieze和@Shikumo
+- 更新SMBIOS和其他内置固件版本
+- 添加了Misc->Serial部分以自定义串行端口属性
+- XNU增加了CustomPciSerialDevice的quirk，可以正确识别定制的外部串行设备
+
 **2022-03-13编译OpenCore-0.8.0-03-23编译版**
 
 - 在脚本中切换到Python 3(使用Python /path/to/script强制Python 2)
@@ -152,21 +161,3 @@
 
 - 更新版本号为0.8.0
 - 支持早期日志的保存
-
-**2022-03-3编译OpenCore-0.7.9-03-03编译版**
-
-- 修复了启用AVX加速时可能出现的内存报错
-- 添加了日志模块，用于按模块进行正向和反向日志过滤
-- 将OpenLinuxBoot驱动程序参数从partuuidpts:{PARTUUID}重命名为autoopts:{PARTUUID}
-- 支持从独立/boot分区启动Linux，而不使用/loader/entries文件（用户必须指定完整的内核启动选项）
-- 在驱动程序参数中处理XML实体
-
-**2022-02-13编译OpenCore-0.7.9-02-13编译版**
-
-- 更新版本号为0.7.9
-- 添加自动检测macOS安装程序卷名，以便在安装时使用 .disk_label文件无法正常显示。
-- 添加--restore-nosnoop 标志恢复到AudioDxe，修复v0.7.7 Windows声音选择
-- 增加一个新方法，当SetApfsTrimTimeout设置为0时禁用修剪 修正了macOS 12上的SetApfsTrimTimeout（仅在设置为0时有效）
-- 为macrecovery添加了构建qemu恢复映像的脚本
-- 修复了在虚拟机监控程序上选择SecureBootModel的问题（应该是x86legacy）
-- 为预链接和更新版本添加了kext阻止策略 添加了全局MSR 35h修复程序以提供当前CPUINFO，允许KVM中的-cpu主机
