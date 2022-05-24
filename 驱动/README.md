@@ -2,9 +2,9 @@
 
 |驱动|版本|说明||
 |-----------------|----|------|-----|
-|AppleALC.kext|1.7.2|用于驱动 ALC 芯片声卡|new~!|
-|BlueToolFixup.kext|2.6.2|Monterey蓝牙修复||
-|CPUFriend.kext|1.2.6|修复CPU睿频-非必要|new~!|
+|AppleALC.kext|1.7.2|用于驱动 ALC 芯片声卡||
+|BlueToolFixup.kext|2.6.1|Monterey蓝牙修复|new~!|
+|CPUFriend.kext|1.2.6|修复CPU睿频-非必要||
 |HibernationFixup.kext|1.4.6|修复睡眠唤醒-非必要||
 |Lilu.kext|1.6.1|核心扩展||
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
