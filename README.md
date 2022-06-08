@@ -142,18 +142,18 @@
 
 ## **目前版本为：**
 
-**2022-06-01编译OpenCore-0.8.1-06-01编译版**
+**2022-06-06编译OpenCore-0.8.1-06-06正式版**
 
-- 在更新的macOS版本上改进了“ExtendBTFeatureFlags”的quirk，感谢thx@lvs1974
-- 添加了关于DMAR表和“ForceAquantiaEthernet”，感谢thx@kokowski的注释
-- 在“LauncherOption”属性中添加了系统选项，感谢thx@stevezhengshiqi
-- 更新了关于“CustomPciSerialDevice”的说明，感谢thx@joevt
+- 在更新的macOS版本上改进了ExtendBTFeatureFlags项
+- 增加了关于DMAR表和ForceAquantiaEthernet
+- 在LauncherOption属性中添加了系统选项
+- 关于CustomPciSerialDevice的更新说明
 - 为NTFS添加了只读驱动程序
-- 将“重置NVRAM”和“切换SIP”切换到可配置的启动条目协议驱动程序
-- 支持可选Apple固件本机NVRAM重置，thx@Syncretic
+- 切换重置NVRAM并将SIP切换到可配置的引导入口协议驱动程序
+- 支持可选Apple固件本机NVRAM重置
 - 支持的NVRAM重置（可选地保留BIOS引导条目）
-- 支持用户为切换SIP指定的“csr active config”值
-- 为“切换SIP”添加了可选的“Enabled”和“Disabled”风格（允许主题设计器提供不同的图标）
+- 切换SIP支持的用户指定的csr活动配置值
+- 为切换SIP添加了可选的启用和禁用样式（允许主题设计器提供不同的图标）
 - 为Hyper-V Gen1 VM上的TSC计算添加了PIIX4 ACPI PM计时器检测
 
 **2022-04-27编译OpenCore-0.8.1-04-27编译版**
