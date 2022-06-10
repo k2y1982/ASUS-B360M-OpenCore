@@ -1,5 +1,10 @@
 OpenCore Changelog
 ==================
+#### v0.8.2
+- Fixed `AppleCpuPmCfgLock` on macOS 13
+- Fixed `DummyPowerManagement` on macOS 13
+- Updated builtin firmware versions for SMBIOS and the rest
+
 #### v0.8.1
 - Improved `ExtendBTFeatureFlags` quirk on newer macOS versions, thx @lvs1974
 - Added notes about DMAR table and `ForceAquantiaEthernet`, thx @kokowski
