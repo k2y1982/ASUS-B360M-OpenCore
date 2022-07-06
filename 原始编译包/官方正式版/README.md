@@ -1,8 +1,8 @@
-# OC 0.8.0 官方正式版
+# OC 0.8.2 官方正式版
 
-- 增加了对早期日志保存的支持
-- 在脚本中切换到Python 3(使用Python /path/to/script强制Python 2)
-- 增加ForceAquantiaEthernet项，支持aququantia AQtion基于AQC-107s的10GbE网卡，感谢@Mieze和@Shikumo
-- 更新SMBIOS和其他内置固件版本
-- 添加了Misc->Serial部分以自定义串行端口属性
-- XNU增加了CustomPciSerialDevice的quirk，可以正确识别定制的外部串行设备
+- Fixed AppleCpuPmCfgLock on macOS 13
+- Fixed DummyPowerManagement on macOS 13
+- Updated builtin firmware versions for SMBIOS and the rest
+- Added macOS 13 support for AvoidRuntimeDefrag Booter quirk
+- Added injected kext bundle version printing in DEBUG builds
+- Added Linux compatibility for CreateVault scripts
