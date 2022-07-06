@@ -1,4 +1,4 @@
-# ASUS PRIME B360M-K i5 8600k OC0.8.2 开发版
+# ASUS PRIME B360M-K i5 8600k OC0.8.3 开发版
 
 - 不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。
 
@@ -125,13 +125,13 @@
 
 |驱动|版本|说明||
 |-----------------|----|------|-----|
-|AppleALC.kext|1.7.2|用于驱动 ALC 芯片声卡|new~!|
-|BlueToolFixup.kext|2.6.2|Monterey蓝牙修复||
+|AppleALC.kext|1.7.4|用于驱动 ALC 芯片声卡|new~!|
+|BlueToolFixup.kext|2.6.1|Monterey蓝牙修复||
 |Lilu.kext|1.6.1|核心扩展||
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
 |USBInjectAll.kext|0.7.8|用于注入所有 USB 端口||
 |VirtualSMC.kext|1.3.0|模拟系统 SMC 以及提供了一些传感器插件||
-|WhateverGreen.kext|1.5.9|显卡补丁集||
+|WhateverGreen.kext|1.6.0|显卡补丁集||
 ** **
 
 ## **引导及系统版本**
@@ -141,6 +141,11 @@
 ** **
 
 ## **目前版本为：**
+
+**2022-07-05编译OpenCore-0.8.2-07-05正式版**
+
+- 在调试版本中添加了注入的kext捆绑包版本打印
+- 为CreateVault脚本添加了Linux兼容性
 
 **2022-06-06编译OpenCore-0.8.1-06-06正式版**
 
