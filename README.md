@@ -48,15 +48,14 @@
 
 |使用方法|说明|
 |-----|-------------------|
-|第1步|进入恢复模式recovery,打开终端|
-|第2步|执行 csrutil disable|
-|第3步|执行 csrutil authenticated-root disable|
-|第4步|将oc的csr-active-config 改为 EF0F0000|
-|第5步|将oc的SecureBootModel 改为 Disabled|
-|第6步|安装 Geforce.Kepler.patcher-V2.dmg|
+|第1步|终端运行，支持任意源安装 sudo spctl --master-disable|
+|第2步|进入恢复模式recovery,打开终端|
+|第3步|执行 csrutil disable|
+|第4步|执行 csrutil authenticated-root disable|
+|第5步|将oc的csr-active-config 改为 EF0F0000|
+|第6步|将oc的SecureBootModel 改为 Disabled|
+|第7步|安装 Geforce.Kepler.patcher-V2.dmg|
 |备注|以上为手动关闭SIP的方法|
-|备注|其实oc辅助项里AllowToggleSip可以一键关闭SIP|
-|备注|只要关闭了SIP和SecureBootModel改Disabled就可以安装了|
 
 ** **
 
