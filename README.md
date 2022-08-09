@@ -1,4 +1,4 @@
-# ASUS PRIME B360M-K i5 8600k OC0.8.3 开发版
+# ASUS PRIME B360M-K i5 8600k OC0.8.4 开发版
 
 - 不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。
 
@@ -124,13 +124,13 @@
 
 |驱动|版本|说明||
 |-----------------|----|------|-----|
-|AppleALC.kext|1.7.4|用于驱动 ALC 芯片声卡|new~!|
+|AppleALC.kext|1.7.5|用于驱动 ALC 芯片声卡|new~!|
 |BlueToolFixup.kext|2.6.1|Monterey蓝牙修复||
-|Lilu.kext|1.6.1|核心扩展||
+|Lilu.kext|1.6.3|核心扩展|new~!|
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
 |USBInjectAll.kext|0.7.8|用于注入所有 USB 端口||
-|VirtualSMC.kext|1.3.0|模拟系统 SMC 以及提供了一些传感器插件||
-|WhateverGreen.kext|1.6.0|显卡补丁集||
+|VirtualSMC.kext|1.3.1|模拟系统 SMC 以及提供了一些传感器插件|new~!|
+|WhateverGreen.kext|1.6.2|显卡补丁集|new~!|
 ** **
 
 ## **引导及系统版本**
@@ -141,46 +141,12 @@
 
 ## **目前版本为：**
 
-**2022-07-05编译OpenCore-0.8.2-07-05正式版**
+**2022-08-01编译OpenCore-0.8.3-08-01正式版**
 
-- 在调试版本中添加了注入的kext捆绑包版本打印
-- 为CreateVault脚本添加了Linux兼容性
-
-**2022-06-06编译OpenCore-0.8.1-06-06正式版**
-
-- 在更新的macOS版本上改进了ExtendBTFeatureFlags项
-- 增加了关于DMAR表和ForceAquantiaEthernet
-- 在LauncherOption属性中添加了系统选项
-- 关于CustomPciSerialDevice的更新说明
-- 为NTFS添加了只读驱动程序
-- 切换重置NVRAM并将SIP切换到可配置的引导入口协议驱动程序
-- 支持可选Apple固件本机NVRAM重置
-- 支持的NVRAM重置（可选地保留BIOS引导条目）
-- 切换SIP支持的用户指定的csr活动配置值
-- 为切换SIP添加了可选的启用和禁用样式（允许主题设计器提供不同的图标）
-- 为Hyper-V Gen1 VM上的TSC计算添加了PIIX4 ACPI PM计时器检测
-
-**2022-04-27编译OpenCore-0.8.1-04-27编译版**
-
-- 更新版本号为0.8.1
-- 在较新的macOS版本上改进了ExtendBTFeatureFlags的quirk项
-
-**2022-04-19编译OpenCore-0.8.0-04-19正式版**
-
-- 增加了对早期日志保存的支持
-- 在脚本中切换到Python 3(使用Python /path/to/script强制Python 2)
-- 增加ForceAquantiaEthernet项，支持aququantia AQtion基于AQC-107s的10GbE网卡，感谢@Mieze和@Shikumo
-- 更新SMBIOS和其他内置固件版本
-- 添加了Misc->Serial部分以自定义串行端口属性
-- XNU增加了CustomPciSerialDevice的quirk，可以正确识别定制的外部串行设备
-
-**2022-03-13编译OpenCore-0.8.0-03-23编译版**
-
-- 在脚本中切换到Python 3(使用Python /path/to/script强制Python 2)
-- 增加ForceAquantiaEthernet项，支持aququantia AQtion基于AQC-107s的10GbE网卡，感谢@Mieze和@Shikumo
-- 更新SMBIOS和其他内置固件版本
-
-**2022-03-13编译OpenCore-0.8.0-03-13编译版**
-
-- 更新版本号为0.8.0
-- 支持早期日志的保存
+- 增加了——show-csr选项切换SIP启动菜单项
+- 添加了macOS 10.4和10.5支持AllowRelocationBlock Booter quirk
+- 在ProvideCurrentCpuInfo quirk中增加了macOS 10.4的CPU缓存信息注入
+- 增加了独立于OpenDuet使用的仿真NVRAM驱动程序
+- 增加了对NVRAM重置的支持，并在使用仿真NVRAM时设置默认启动项
+- 升级模拟NVRAM注销脚本，以允许无监督安装最近的macOS OTA更新
+- 增加了Driver -> LoadEarly用于NVRAM初始化前需要加载的驱动
