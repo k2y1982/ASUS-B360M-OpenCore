@@ -1,8 +1,45 @@
 OpenCore Changelog
 ==================
+#### v0.8.7
+- Removed unwanted clear screen when launching non-text boot entry
+- Fixed TSC/FSB for AMD CPUs in ProvideCurrentCpuInfo, thx @Shaneee
+- Added `Misc` -> `Boot` -> `HibernateSkipsPicker` not to show picker if waking from macOS hibernation
+- Changed macrecovery to download files into `com.apple.recovery.boot` by default, thx @dreamwhite
+- Supported Apple builtin picker (using `BootKicker.efi` or `PickerMode` `Apple`) when running GPUs without Mac-EFI support on units such as the MacPro5,1 (thx @cdf, @tsialex)
+- Enabled `PickerMode` `Apple` to successfully launch selected entry
+- Enabled `BootKicker.efi` to successfully launch selected entry (via reboot) (thx @cdf)
+- Added spoof proof UEFI 2.x checking to OpenVariableRuntimeDxe, thx @dakanji
+
+#### v0.8.6
+- Updated NVRAM save script for compatibilty with earlier macOS (Snow Leopard+ tested)
+- Updated NVRAM save script to automatically install as launch daemon (Yosemite+) or logout hook (older macOS)
+- Fixed maximum click duration and double click speed for non-standard poll frequencies
+- Added support for pointer dwell-clicking
+- Fixed recursive loop crash at first non-early log line on some systems
+- Fixed early log preservation when using unsafe fast file logging
+- Updated builtin firmware versions for SMBIOS and the rest
+- Resolved wake-from-sleep failure on EFI 1.1 systems (including earlier Macs) with standalone emulated NVRAM driver
+- Updated macrecovery commands with macOS 12 and 13, thx @Core-i99
+- Updates SSDT-BRG0 with macOS-specific STA to avoid compatibility issues on Windows, thx @Lorys89
+- Fixed memory issues in OpenLinuxBoot causing crashes on 32-bit UEFI firmware
+
+#### v0.8.5
+- Updated builtin firmware versions for SMBIOS and the rest
+- Moved CPU objects that exist only in Windows Server 2022 into `SSDT-HV-DEV-WS2022.dsl`
+- Updated Hyper-V device path expansion to support hot add/remove of disks
+- Improved verbose logging during kernel patching
+
 #### v0.8.4
 - Added checks for `Driver` -> `LoadEarly` in ocvalidate
 - Added `FullNvramAccess` option for tools which require direct access to NVRAM
+- Replaced `SSDT-HV-CPU.dsl` with `SSDT-HV-DEV.dsl` for compatiblity with older macOS versions on Windows 10 and newer
+- Updated builtin zlib library to 1.2.12
+- Changed ocpasswordgen not to print characters on password input
+- Added ProcessKernel utility for testing kext injection based on configs
+- Fixed crash while using `SysReport` on Pentium 4 systems
+- Fixed crash after ExitBootServices() is called while using DEBUG builds and file logging
+- Fixed 32-bit userspace build support on macOS (use High Sierra 10.13 and below)
+- Added basic set of NetworkPkg drivers with HTTP boot support
 
 #### v0.8.3
 - Added ext4 file system driver
@@ -264,7 +301,7 @@ OpenCore Changelog
 - Fixed ACPI table magic corruption during patching
 - Fixed unnatural OpenCanopy and FileVault 2 cursor movement
 - Fixed OpenCanopy interrupt handling causing missed events and lag
-- Improved OpenCanopy double-click detection 
+- Improved OpenCanopy double-click detection
 - Reduced OpenCanopy touch input lag and improved usability
 - Improved keypress responsiveness in OpenCanopy and builtin pickers
 - Improved non-repeating key detection in OpenCanopy and builtin pickers
