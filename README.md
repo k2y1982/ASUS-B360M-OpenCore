@@ -1,4 +1,4 @@
-# ASUS PRIME B360M-K i5 8600k OC0.8.4 开发版
+# ASUS PRIME B360M-K i5 8600k OC0.8.8 开发版
 
 - 不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。
 
@@ -124,13 +124,13 @@
 
 |驱动|版本|说明||
 |-----------------|----|------|-----|
-|AppleALC.kext|1.7.5|用于驱动 ALC 芯片声卡|new~!|
+|AppleALC.kext|1.7.8|用于驱动 ALC 芯片声卡|new~!|
 |BlueToolFixup.kext|2.6.1|Monterey蓝牙修复||
-|Lilu.kext|1.6.3|核心扩展|new~!|
+|Lilu.kext|1.6.3|核心扩展||
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
 |USBInjectAll.kext|0.7.8|用于注入所有 USB 端口||
-|VirtualSMC.kext|1.3.1|模拟系统 SMC 以及提供了一些传感器插件|new~!|
-|WhateverGreen.kext|1.6.2|显卡补丁集|new~!|
+|VirtualSMC.kext|1.3.1|模拟系统 SMC 以及提供了一些传感器插件||
+|WhateverGreen.kext|1.6.3|显卡补丁集|new~!|
 ** **
 
 ## **引导及系统版本**
@@ -141,12 +141,13 @@
 
 ## **目前版本为：**
 
-**2022-08-01编译OpenCore-0.8.3-08-01正式版**
+**2022-12-07编译OpenCore-0.8.7-12-07正式版**
 
-- 增加了——show-csr选项切换SIP启动菜单项
-- 添加了macOS 10.4和10.5支持AllowRelocationBlock Booter quirk
-- 在ProvideCurrentCpuInfo quirk中增加了macOS 10.4的CPU缓存信息注入
-- 增加了独立于OpenDuet使用的仿真NVRAM驱动程序
-- 增加了对NVRAM重置的支持，并在使用仿真NVRAM时设置默认启动项
-- 升级模拟NVRAM注销脚本，以允许无监督安装最近的macOS OTA更新
-- 增加了Driver -> LoadEarly用于NVRAM初始化前需要加载的驱动
+- 启动非文本启动项时删除了不需要的透明屏幕
+- 固定了ProvideCurrentCpuInfo中AMD CPU的TSC/FSB，
+- 添加了Misc - Boot -Hibernate SkipsPicker，以在从macOS休眠中醒来时不显示选择器
+- 将macrecover更改为将文件下载到com.apple.recovery。默认情况下启动，
+- 在MacPro5,1等设备上运行不支持Mac efi的GPU时，支持Apple内置选择器（使用BootKicker.efi或PickerMode Apple）
+- 已启用PickerMode Apple以成功启动所选条目
+- 已启用BootKicker。efi成功启动选定的条目（通过重新启动）
+- 将防欺骗UEFI 2.x检查添加到OpenVariableRuntimeDxe
