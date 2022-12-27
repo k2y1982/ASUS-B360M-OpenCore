@@ -3,7 +3,7 @@
 |驱动|版本|说明||
 |-----------------|----|------|-----|
 |AppleALC.kext|1.7.8|用于驱动 ALC 芯片声卡|new~!|
-|BlueToolFixup.kext|2.6.1|Monterey蓝牙修复||
+|BlueToolFixup.kext|2.6.4|Monterey蓝牙修复|new~!|
 |CPUFriend.kext|1.2.7|修复CPU睿频-非必要||
 |HibernationFixup.kext|1.4.8|修复睡眠唤醒-非必要|new~!|
 |Lilu.kext|1.6.3|核心扩展||
