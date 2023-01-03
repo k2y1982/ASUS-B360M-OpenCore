@@ -129,7 +129,7 @@
 |驱动|版本|说明||
 |-----------------|----|------|-----|
 |AppleALC.kext|1.7.9|用于驱动 ALC 芯片声卡|new~!|
-|BlueToolFixup.kext|2.6.4|Monterey蓝牙修复||
+|BlueToolFixup.kext|2.6.4|蓝牙修复||
 |Lilu.kext|1.6.4|核心扩展|new~!|
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
 |USBInjectAll.kext|0.7.8|用于注入所有 USB 端口||
