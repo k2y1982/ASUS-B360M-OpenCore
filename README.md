@@ -1,4 +1,4 @@
-# ASUS PRIME B360M-K i5 8600k OC0.8.8 开发版
+# ASUS PRIME B360M-K i5 8600k OC0.8.9 开发版
 
 - 不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。
 
@@ -68,6 +68,7 @@
 - 新版的OC可以勾选 ```AllowToggleSip``` 来开关SIP。
 
 - Ventura也可以用[OpenCore-Legacy-Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)来安装gt730显卡驱动，但不完美，很多app都会闪退，还是换显卡吧。
+
 - 启动参数还需要加入 ```amfi_get_out_of_my_way=1```
 
 
