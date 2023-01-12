@@ -34,15 +34,37 @@
 
 ** **
 
-## **支持Monterey 12.0beta 安装：**
+## **支持Ventura 13.1 安装：**
+
+- 安装OpenCore-Legacy-Patcher前，需要先做以下操作：
+
+|使用方法|说明|
+|-----|-------------------|
+|第1步|终端运行，支持任意源安装 sudo spctl --master-disable|
+|第2步|进入恢复模式recovery,打开终端|
+|第3步|执行 csrutil disable|
+|第4步|执行 csrutil authenticated-root disable|
+|第5步|将oc的csr-active-config 改为 EF0F0000|
+|第6步|将oc的SecureBootModel 改为 Disabled|
+|第7步|启动项加入参数 ```amfi_get_out_of_my_way=0x1```|
+|第8步|启动项加入参数 ```ipc_control_port_options=0```|
+|第9步|安装 OpenCore-Legacy-Patcher.app|
+
+- Ventura也可以用[OpenCore-Legacy-Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)来安装gt730显卡驱动。
+
+- ```amfi_get_out_of_my_way=0x1``` 禁用amfi检测。
+
+- ```ipc_control_port_options=0``` 避免一些需要sip的软件闪退。 
+
+** **
+
+## **支持Monterey 12.x 安装：**
 
 - ~~增加了 ```-lilubetaall``` 参数，以支持 VirtualSMC的IO信息获取，ALC的音频模拟。~~ 更新驱动后已不再需要。
 
 - Monterey B2 安装时需要将 ```SecureBootModel``` 设置为 ```disable```。
 
 - 截至7月6日 monterey的蓝牙问题大部分解决，需要用到[BlueToolFixup.kext](https://gitee.com/k2y1982/OC/tree/master/%E9%A9%B1%E5%8A%A8)。
-
-- 软件闪退只能等软件更新，并没有别的办法。
 
 - 从B7开始删除了N卡驱动，目前只能用Geforce.Kepler.patcher-V5.dmg来重新安装N卡驱动（已放在驱动目录里了），使用方法如下：
 
@@ -65,12 +87,7 @@
 
 - ```prev-lang:kbd``` 默认设置为 ```7A682D48 616E733A 323532``` (中文)
 
-- 新版的OC可以勾选 ```AllowToggleSip``` 来开关SIP。
-
-- Ventura也可以用[OpenCore-Legacy-Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)来安装gt730显卡驱动，但不完美，很多app都会闪退，还是换显卡吧。
-
-- 启动参数还需要加入 ```amfi_get_out_of_my_way=1```
-
+** **
 
 ## **安装完成后的设置**
 
