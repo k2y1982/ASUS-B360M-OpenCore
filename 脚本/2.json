@@ -25,7 +25,7 @@
     {
       "name": "live",
       //"url": "http://我不是.肥猫.love:63/TV/tvzb.txt",
-	  "url": "http://192.168.1.4/C%3A/Users/Administrator/Documents/ipv6.txt",
+      "url": "https://raw.kgithub.com/k2y1982/ASUS-B360M-OpenCore/master/%E8%84%9A%E6%9C%AC/ipv6.txt",
       "type": 0,
       "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}"
     }
