@@ -66,7 +66,7 @@
 
 - 截至7月6日 monterey的蓝牙问题大部分解决，需要用到[BlueToolFixup.kext](https://gitee.com/k2y1982/OC/tree/master/%E9%A9%B1%E5%8A%A8)。
 
-- 从B7开始删除了N卡驱动，目前只能用Geforce.Kepler.patcher-V5.dmg来重新安装N卡驱动（已放在驱动目录里了），使用方法如下：
+- 从B7开始删除了N卡驱动，目前只能用Geforce.Kepler.patcher-V7.dmg来重新安装N卡驱动（已放在驱动目录里了），使用方法如下：
 
 |使用方法|说明|
 |-----|-------------------|
@@ -145,13 +145,13 @@
 
 |驱动|版本|说明||
 |-----------------|----|------|-----|
-|AppleALC.kext|1.7.9|用于驱动 ALC 芯片声卡|new~!|
+|AppleALC.kext|1.9.0|用于驱动 ALC 芯片声卡|new~!|
 |BlueToolFixup.kext|2.6.4|蓝牙修复||
-|Lilu.kext|1.6.4|核心扩展|new~!|
+|Lilu.kext|1.6.8|核心扩展|new~!|
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
 |USBInjectAll.kext|0.7.8|用于注入所有 USB 端口||
-|VirtualSMC.kext|1.3.1|模拟系统 SMC 以及提供了一些传感器插件||
-|WhateverGreen.kext|1.6.4|显卡补丁集|new~!|
+|VirtualSMC.kext|1.3.3|模拟系统 SMC 以及提供了一些传感器插件|new~!|
+|WhateverGreen.kext|1.6.7|显卡补丁集|new~!|
 ** **
 
 ## **引导及系统版本**
