@@ -34,7 +34,7 @@
 
 ** **
 
-## **支持Ventura 13.1 安装：**
+## **支持Sonoma 14.3.1 安装：**
 
 - 安装OpenCore-Legacy-Patcher前，需要先做以下操作：
 
@@ -83,7 +83,7 @@
 
 ## **其它说明**
 
-- ```SecureBootModel``` 默认设置为 ```disable```，Catalina,Big sur,Monterey,Ventura 都可以正常安装。
+- ```SecureBootModel``` 默认设置为 ```disable```，Catalina,Big sur,Monterey,Ventura,Sonoma 都可以正常安装。
 
 - ```prev-lang:kbd``` 默认设置为 ```7A682D48 616E733A 323532``` (中文)
 
@@ -156,7 +156,7 @@
 
 ## **引导及系统版本**
 
-- 已经测试支持Catalina，Big Sur，Monterey，Ventura
+- 已经测试支持Catalina,Big Sur,Monterey,Ventura,Sonoma
 
 ** **
 
