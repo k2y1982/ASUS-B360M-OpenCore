@@ -10,6 +10,7 @@
 |VirtualSMC.kext|1.3.3|模拟系统 SMC 以及提供了一些传感器插件|new~!|
 |WhateverGreen.kext|1.6.7|显卡补丁集|new~!|
 |BlueToolFixup.kext|2.6.4|Monterey蓝牙修复||
+|BlueToolFixup.kext|2.6.8|Sonoma蓝牙修复|new~!|
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
 |USBInjectAll.kext|0.7.8|用于注入所有 USB 端口||
 
