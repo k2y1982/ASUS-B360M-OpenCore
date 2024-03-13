@@ -1,6 +1,12 @@
-# ASUS PRIME B360M-K i5 8600k OC0.8.9 开发版
+# ASUS PRIME B360M-K i5 8600k OC1.0.0 开发版
 
-- 不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。
+- ~~不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。~~
+
+- OC 1.0.0 开发版的包来自[dortania/build-repo](https://github.com/dortania/build-repo/releases)
+
+- Sonoma安装GT1030驱动原文[https://blog.csdn.net/ilovefifa2020/article/details/129365522](https://blog.csdn.net/ilovefifa2020/article/details/129365522)
+
+- Sonoma安装GT1030还需要[kernel debug kit](https://developer.apple.com/download/all/?q=kernel%20debug%20kit),请根据自己的系统版本下载。
 
 - 有独显或独显+核显加速无需添加显卡ID，自动驱动。只有核显请看下一条。
 
@@ -50,11 +56,19 @@
 |第8步|启动项加入参数 ```ipc_control_port_options=0```|
 |第9步|安装 OpenCore-Legacy-Patcher.app|
 
-- Ventura也可以用[OpenCore-Legacy-Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)来安装gt730显卡驱动。
+- Ventura，Sonoma也可以用[OpenCore-Legacy-Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)来安装GT730 GT1030显卡驱动。
 
-- ```amfi_get_out_of_my_way=0x1``` 禁用amfi检测。
+- ```amfi_get_out_of_my_way=0x1``` 禁用amfi检测，GT730 GT1030 需要添加。
+
+- ```ngfxcompat=1``` Sonoma安装GT1030需要添加。
+
+- ```ngfxgl=1``` Sonoma安装GT1030需要添加。
+
+- ```nvda_drv_vrl=1``` Sonoma安装GT1030需要添加。
 
 - ```ipc_control_port_options=0``` 避免一些需要sip的软件闪退。 
+
+- ```升级到Sonoma后，GT1030显卡不支持METAL，有需要的切勿升级。```
 
 ** **
 
@@ -76,7 +90,7 @@
 |第4步|执行 csrutil authenticated-root disable|
 |第5步|将oc的csr-active-config 改为 EF0F0000|
 |第6步|将oc的SecureBootModel 改为 Disabled|
-|第7步|安装 Geforce.Kepler.patcher-V5.dmg|
+|第7步|安装 Geforce.Kepler.patcher-V7.dmg|
 |备注|以上为手动关闭SIP的方法|
 
 ** **
@@ -125,7 +139,7 @@
 |CPU|I5-8600K|
 |主板|ASUS PRIME B360M-K|
 |显卡|Intel UHD 630|
-|显卡|Nvidia GT730|
+|显卡|Nvidia GT1030(non-metal)|
 |声卡|ALC887|
 |网卡|Realtek 8111|
 
@@ -134,7 +148,7 @@
 |功能|完成度|
 |--------|-----------------------------------------|
 |CPU 变频|正常|
-|显卡|核显硬件加速正常，独显驱动正常|
+|显卡|核显硬件加速正常，独显驱动正常，non-metal|
 |声卡|直接驱动，且使用id为11，完美适配本主板|
 |网卡|正常|
 |睡眠|正常|
@@ -146,7 +160,7 @@
 |驱动|版本|说明||
 |-----------------|----|------|-----|
 |AppleALC.kext|1.9.0|用于驱动 ALC 芯片声卡|new~!|
-|BlueToolFixup.kext|2.6.4|蓝牙修复||
+|BlueToolFixup.kext|2.6.8|蓝牙修复||
 |Lilu.kext|1.6.8|核心扩展|new~!|
 |RealtekRTL8111.kext|2.4.2|用于驱动 RTL8111 有线以太网卡||
 |USBInjectAll.kext|0.7.8|用于注入所有 USB 端口||
@@ -161,6 +175,8 @@
 ** **
 
 ## **目前版本为：**
+
+**OC 1.0.0 官方开发版**
 
 **OC 0.8.8 官方正式版**
 
