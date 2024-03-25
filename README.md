@@ -1,8 +1,8 @@
-# ASUS PRIME B360M-K i5 8600k OC1.0.0 开发版
+# ASUS PRIME B360M-K i5 8600k OC1.0.0 3.13 开发版
 
 - ~~不是自己编译，基本包为 [独行秀才](https://gitee.com/shuiyunxc/OpenCore) 的编译包 和 [bugprogrammer/HackinPlugins](https://github.com/bugprogrammer/HackinPlugins/releases) 的编译包。有更新的时候同步更新。~~
 
-- OC 1.0.0 开发版的包来自[dortania/build-repo](https://github.com/dortania/build-repo/releases)
+- OC 1.0.0 3.13 开发版的包来自[dortania/build-repo](https://github.com/dortania/build-repo/releases)
 
 - Sonoma安装GT1030驱动原文[https://blog.csdn.net/ilovefifa2020/article/details/129365522](https://blog.csdn.net/ilovefifa2020/article/details/129365522)
 
@@ -12,7 +12,7 @@
 
 - 此主板只用核显+DVI的配置已经测试成功，配置文件放在[>这里<](https://gitee.com/k2y1982/OC/tree/master/%E6%A0%B8%E6%98%BE+DVI%E6%8E%A5%E5%8F%A3FB%E5%B8%A7%E7%BC%93%E5%86%B2)。
 
-- 写了一个从应用程序创建dmg安装镜像，把dmg镜像写入u盘，dmg镜像转iso的脚本，使用中有问题的请反馈我。
+- ~~写了一个从应用程序创建dmg安装镜像，把dmg镜像写入u盘，dmg镜像转iso的脚本，使用中有问题的请反馈我。~~
 
 ** **
 
@@ -40,7 +40,9 @@
 
 ** **
 
-## **支持Sonoma 14.3.1 安装：**
+## **支持Sonoma 14.3.1 & 14.4 安装：**
+
+- 不支持的METAL的显卡切勿安装 14.4
 
 - 安装OpenCore-Legacy-Patcher前，需要先做以下操作：
 
@@ -80,7 +82,9 @@
 
 - 截至7月6日 monterey的蓝牙问题大部分解决，需要用到[BlueToolFixup.kext](https://gitee.com/k2y1982/OC/tree/master/%E9%A9%B1%E5%8A%A8)。
 
-- 从B7开始删除了N卡驱动，目前只能用Geforce.Kepler.patcher-V7.dmg来重新安装N卡驱动（已放在驱动目录里了），使用方法如下：
+- ~~从B7开始删除了N卡驱动，目前只能用Geforce.Kepler.patcher-V7.dmg来重新安装N卡驱动（已放在驱动目录里了），使用方法如下：~~
+
+- 推荐使用 OpenCore-Legacy-Patcher ，支持到Sonoma，使用方法跟 Geforce.Kepler.patcher-V7 一样：
 
 |使用方法|说明|
 |-----|-------------------|
@@ -176,7 +180,7 @@
 
 ## **目前版本为：**
 
-**OC 1.0.0 官方开发版**
+**OC 1.0.0 3.13 官方开发版**
 
 **OC 0.8.8 官方正式版**
 
